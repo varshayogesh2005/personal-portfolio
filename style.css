@@ -1,9 +1,16 @@
-/* ================================
-   GENERAL STYLES
-================================ */
+/* =========================================
+   PERSONAL PORTFOLIO
+   CSS STYLESHEET
+   ========================================= */
+
+/* =========================================
+   1. BASIC RESET
+   ========================================= */
 
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 html {
@@ -11,16 +18,32 @@ html {
 }
 
 body {
-    margin: 0;
     font-family: Arial, sans-serif;
     line-height: 1.6;
     background-color: #f4f6f8;
     color: #222;
 }
 
-/* ================================
-   HEADER
-================================ */
+/* =========================================
+   2. GENERAL TEXT
+   ========================================= */
+
+h1,
+h2,
+h3 {
+    line-height: 1.3;
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+a {
+    color: inherit;
+}
+/* =========================================
+   3. HEADER
+   ========================================= */
 
 header {
     background-color: #1f2937;
@@ -30,18 +53,18 @@ header {
 }
 
 header h1 {
-    margin: 0 0 8px;
+    margin-bottom: 8px;
     font-size: 2.2rem;
 }
 
 header p {
-    margin: 0 0 20px;
+    margin-bottom: 20px;
     font-size: 1rem;
 }
 
-/* ================================
-   NAVIGATION
-================================ */
+/* =========================================
+   4. NAVIGATION
+   ========================================= */
 
 nav ul {
     list-style: none;
@@ -50,33 +73,35 @@ nav ul {
     align-items: center;
     flex-wrap: wrap;
     gap: 15px;
-    padding: 0;
-    margin: 0;
 }
 
 nav a {
+    display: inline-block;
     color: white;
     text-decoration: none;
     font-weight: bold;
     padding: 8px 12px;
     border-radius: 6px;
-    transition: background-color 0.3s, transform 0.3s;
+    transition: 0.3s;
 }
 
 nav a:hover {
     background-color: #374151;
     transform: translateY(-2px);
 }
-
-/* ================================
-   MAIN CONTENT
-================================ */
+/* =========================================
+   5. MAIN CONTENT
+   ========================================= */
 
 main {
     width: 90%;
     max-width: 1100px;
     margin: 30px auto;
 }
+
+/* =========================================
+   6. GENERAL SECTIONS
+   ========================================= */
 
 section {
     background-color: white;
@@ -88,100 +113,170 @@ section {
 
 section h2 {
     margin-top: 0;
+    margin-bottom: 20px;
     font-size: 1.8rem;
 }
-
-/* ================================
-   HERO / HOME
-================================ */
+/* =========================================
+   7. HOME / HERO SECTION
+   ========================================= */
 
 #home {
-    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    grid-template-areas:
+        "title image"
+        "intro image"
+        "interest image"
+        "learning image"
+        "buttons image";
+    align-items: center;
+    gap: 20px 40px;
+    min-height: 450px;
+}
+
+#home h2 {
+    grid-area: title;
+    margin: 0;
+    font-size: 2.2rem;
 }
 
 #home figure {
-    margin: 20px auto;
+    grid-area: image;
+    text-align: center;
+    margin: 0;
 }
 
-#home img {
+#home figure img {
+    width: 220px;
+    height: 280px;
     max-width: 100%;
-    height: auto;
-    border-radius: 12px;
+    object-fit: cover;
+    border-radius: 15px;
 }
 
-#home a {
+#home p:nth-of-type(1) {
+    grid-area: intro;
+    margin: 0;
+}
+
+#home p:nth-of-type(2) {
+    grid-area: interest;
+    margin: 0;
+}
+
+#home p:nth-of-type(3) {
+    grid-area: learning;
+    margin: 0;
+}
+
+#home p:nth-of-type(4) {
+    grid-area: buttons;
+    margin: 0;
+}
+
+#home p:nth-of-type(4) a {
     display: inline-block;
-    margin: 8px;
-    padding: 10px 18px;
+    padding: 11px 18px;
+    margin: 5px;
     background-color: #1f2937;
     color: white;
     text-decoration: none;
     border-radius: 6px;
-    transition: transform 0.3s, background-color 0.3s;
+    transition: 0.3s;
 }
 
-#home a:hover {
+#home p:nth-of-type(4) a:hover {
     background-color: #374151;
-    transform: scale(1.05);
+    transform: translateY(-2px);
 }
-
-/* ================================
-   ABOUT
-================================ */
-
-#about {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-}
-
-#about h2 {
-    grid-column: 1 / -1;
-}
+/* =========================================
+   8. ABOUT SECTION
+   ========================================= */
 
 #about article {
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 10px;
+    margin-bottom: 25px;
 }
 
-#about article h3 {
-    margin-top: 0;
+#about article:last-child {
+    margin-bottom: 0;
 }
 
-/* ================================
-   SKILLS
-================================ */
+#about h3 {
+    margin-bottom: 10px;
+    font-size: 1.3rem;
+}
+
+#about p {
+    margin-bottom: 15px;
+    color: #444;
+}
+
+#about ul {
+    margin-left: 20px;
+    margin-bottom: 15px;
+}
+
+#about li {
+    margin-bottom: 8px;
+}
+/* =========================================
+   9. SKILLS SECTION
+   ========================================= */
 
 #skills {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+    gap: 25px;
 }
 
-#skills h2 {
+#skills > h2 {
     grid-column: 1 / -1;
 }
 
 #skills article {
-    padding: 20px;
-    border: 1px solid #ddd;
+    background-color: #f8fafc;
+    padding: 25px;
+    border: 1px solid #e5e7eb;
     border-radius: 10px;
-    transition: transform 0.3s, box-shadow 0.3s;
 }
 
-#skills article:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.12);
+#skills article h3 {
+    margin-bottom: 18px;
+    font-size: 1.3rem;
+    color: #1f2937;
 }
 
 #skills ul {
-    padding-left: 20px;
+    list-style: none;
+    display: grid;
+    gap: 12px;
 }
 
-/* ================================
-   EDUCATION
-================================ */
+#skills li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    padding: 12px 15px;
+    background-color: white;
+    border-radius: 6px;
+    border-left: 4px solid #1f2937;
+}
+
+#skills .skill-level {
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #4b5563;
+    white-space: nowrap;
+}
+
+#skills article:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+    transition: 0.3s;
+}
+/* =========================================
+   10. EDUCATION SECTION
+   ========================================= */
 
 #education {
     overflow-x: auto;
@@ -190,23 +285,38 @@ section h2 {
 #education table {
     width: 100%;
     border-collapse: collapse;
+    margin-top: 15px;
+}
+
+#education caption {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-bottom: 8px;
 }
 
 #education th,
 #education td {
+    border: 1px solid #cbd5e1;
     padding: 12px;
     text-align: left;
-    border: 1px solid #ccc;
 }
 
 #education th {
     background-color: #1f2937;
     color: white;
+    text-align: center;
 }
 
-/* ================================
-   PROJECTS
-================================ */
+#education tbody tr {
+    transition: 0.3s;
+}
+
+#education tbody tr:hover {
+    background-color: #f1f5f9;
+}
+/* =========================================
+   11. PROJECTS SECTION
+   ========================================= */
 
 #projects {
     display: grid;
@@ -214,167 +324,193 @@ section h2 {
     gap: 20px;
 }
 
-#projects h2 {
+#projects > h2 {
     grid-column: 1 / -1;
 }
 
-#projects article {
-    padding: 22px;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    background-color: #fafafa;
-    transition: transform 0.3s, box-shadow 0.3s;
+#projects > article {
+    padding: 25px;
+    background-color: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    transition: 0.3s;
 }
 
-#projects article:hover {
+#projects > article:hover {
     transform: translateY(-6px);
-    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
 }
 
-/* ================================
-   RESUME
-================================ */
+#projects > article h3 {
+    margin-bottom: 12px;
+    font-size: 1.3rem;
+}
+
+#projects > article p {
+    margin-bottom: 12px;
+}
+
+#projects > article a {
+    display: inline-block;
+    margin-top: auto;
+    padding: 10px 15px;
+    background-color: #1f2937;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+#projects > article a:hover {
+    background-color: #374151;
+    transform: translateY(-2px);
+}
+/* =========================================
+   12. RESUME SECTION
+   ========================================= */
 
 #resume {
     text-align: center;
 }
 
+#resume p {
+    margin-bottom: 20px;
+}
+
 #resume a {
     display: inline-block;
     padding: 12px 20px;
-    margin: 8px;
     background-color: #1f2937;
     color: white;
     text-decoration: none;
-    border-radius: 7px;
-    transition: transform 0.3s, background-color 0.3s;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: 0.3s;
 }
 
 #resume a:hover {
     background-color: #374151;
-    transform: scale(1.05);
+    transform: translateY(-2px);
 }
+/* =========================================
+   13. CONTACT SECTION
+   ========================================= */
 
-/* ================================
-   CERTIFICATIONS
-================================ */
-
-#certifications ul {
-    padding-left: 25px;
+#contact address {
+    font-style: normal;
+    margin-bottom: 25px;
+    line-height: 1.8;
 }
-
-/* ================================
-   CONTACT FORM
-================================ */
 
 #contact form {
-    max-width: 700px;
-    margin: 20px auto;
+    display: grid;
+    gap: 15px;
 }
 
-fieldset {
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    padding: 20px;
-    margin-bottom: 20px;
-}
-
-legend {
-    font-weight: bold;
-    padding: 0 8px;
-}
-
-label {
+#contact label {
     font-weight: bold;
 }
 
-input,
-select,
-textarea {
+#contact input,
+#contact select,
+#contact textarea {
     width: 100%;
-    padding: 10px;
-    margin-top: 6px;
-    border: 1px solid #bbb;
+    padding: 11px 12px;
+    border: 1px solid #cbd5e1;
     border-radius: 6px;
-    font: inherit;
+    font-family: inherit;
+    font-size: 1rem;
 }
 
-input:focus,
-select:focus,
-textarea:focus {
+#contact textarea {
+    min-height: 130px;
+    resize: vertical;
+}
+
+#contact input:focus,
+#contact select:focus,
+#contact textarea:focus {
     outline: 2px solid #1f2937;
+    outline-offset: 2px;
 }
 
-input[type="radio"],
-input[type="checkbox"] {
-    width: auto;
-    margin-right: 6px;
-}
-
-button {
-    padding: 11px 20px;
-    margin-right: 8px;
+#contact button {
+    padding: 12px 20px;
     border: none;
     border-radius: 6px;
     background-color: #1f2937;
     color: white;
+    font-size: 1rem;
     font-weight: bold;
     cursor: pointer;
-    transition: transform 0.3s, background-color 0.3s;
+    transition: 0.3s;
 }
 
-button:hover {
+#contact button:hover {
     background-color: #374151;
     transform: translateY(-2px);
 }
-
-/* ================================
-   FOOTER
-================================ */
+/* =========================================
+   14. FOOTER
+   ========================================= */
 
 footer {
     background-color: #1f2937;
     color: white;
     text-align: center;
     padding: 30px 20px;
+    margin-top: 30px;
+}
+
+footer p {
+    margin-bottom: 10px;
+}
+
+footer p:last-child {
+    margin-bottom: 0;
 }
 
 footer a {
     color: white;
-    font-weight: bold;
     text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
 }
 
 footer a:hover {
     text-decoration: underline;
 }
-
-/* ================================
-   TABLET
-================================ */
+/* =========================================
+   15. TABLET RESPONSIVE DESIGN
+   ========================================= */
 
 @media (max-width: 900px) {
 
-    #about {
-        grid-template-columns: repeat(2, 1fr);
+    main {
+        width: 94%;
     }
 
-    #skills {
-        grid-template-columns: repeat(2, 1fr);
+    section {
+        padding: 25px;
+    }
+
+    #home {
+        grid-template-columns: 1fr 1fr;
+        gap: 25px;
     }
 
     #projects {
         grid-template-columns: repeat(2, 1fr);
     }
 
-    section {
-        padding: 25px;
-    }
 }
 
-/* ================================
-   MOBILE
-================================ */
+
+/* =========================================
+   16. MOBILE RESPONSIVE DESIGN
+   ========================================= */
 
 @media (max-width: 600px) {
 
@@ -388,416 +524,17 @@ footer a:hover {
 
     nav ul {
         flex-direction: column;
-        gap: 8px;
+        gap: 5px;
     }
 
     nav a {
-        display: block;
-    }
-
-    main {
-        width: 95%;
-        margin: 20px auto;
-    }
-
-    section {
-        padding: 20px;
-    }
-
-    #about,
-    #skills,
-    #projects {
-        grid-template-columns: 1fr;
-    }
-
-    #home img {
-        width: 180px;
-    }
-
-    #education table {
-        min-width: 650px;
-    }
-
-    #contact form {
         width: 100%;
-    }
-
-    button {
-        margin-bottom: 10px;
-    }
-}
-
-/* =========================================
-   WEEK 2 - CSS FUNDAMENTALS
-   ========================================= */
-
-/* ---------- BASIC RESET ---------- */
-
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    background-color: #f5f7fa;
-    color: #222;
-}
-
-/* ---------- HEADER ---------- */
-
-header {
-    background-color: #1f2937;
-    color: white;
-    padding: 20px;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
-
-header h1 {
-    text-align: center;
-    margin-bottom: 15px;
-}
-
-/* ---------- NAVIGATION - FLEXBOX ---------- */
-
-nav ul {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 20px;
-    list-style: none;
-}
-
-nav a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    padding: 8px 12px;
-    transition: 0.3s ease;
-}
-
-nav a:hover {
-    background-color: #374151;
-    border-radius: 6px;
-    transform: translateY(-2px);
-}
-
-/* ---------- MAIN ---------- */
-
-main {
-    width: 90%;
-    max-width: 1200px;
-    margin: 30px auto;
-}
-
-/* ---------- SECTIONS ---------- */
-
-section {
-    background-color: white;
-    margin-bottom: 30px;
-    padding: 40px;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-}
-
-section h2 {
-    text-align: center;
-    margin-bottom: 25px;
-    font-size: 30px;
-}
-
-/* ---------- HERO / HOME ---------- */
-
-#home {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 40px;
-    min-height: 400px;
-}
-
-#home img {
-    width: 220px;
-    height: 220px;
-    object-fit: cover;
-    border-radius: 50%;
-    border: 5px solid #1f2937;
-    max-width: 100%;
-}
-
-#home a {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 12px 24px;
-    background-color: #1f2937;
-    color: white;
-    text-decoration: none;
-    border-radius: 6px;
-    transition: 0.3s ease;
-}
-
-#home a:hover {
-    background-color: #374151;
-    transform: scale(1.05);
-}
-
-/* ---------- ABOUT ---------- */
-
-#about p {
-    margin-bottom: 15px;
-}
-
-/* ---------- SKILLS - CSS GRID ---------- */
-
-#skills {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-}
-
-#skills h2 {
-    grid-column: 1 / -1;
-}
-
-#skills article {
-    padding: 20px;
-    background-color: #f8fafc;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    transition: 0.3s ease;
-}
-
-#skills article:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.12);
-}
-
-/* ---------- EDUCATION ---------- */
-
-#education {
-    overflow-x: auto;
-}
-
-#education table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-}
-
-#education th,
-#education td {
-    border: 1px solid #ccc;
-    padding: 12px;
-    text-align: left;
-}
-
-#education th {
-    background-color: #1f2937;
-    color: white;
-}
-
-#education tr:nth-child(even) {
-    background-color: #f3f4f6;
-}
-
-/* ---------- PROJECTS - CSS GRID ---------- */
-
-#projects {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
-}
-
-#projects h2 {
-    grid-column: 1 / -1;
-}
-
-#projects article {
-    background-color: #f8fafc;
-    border: 1px solid #ddd;
-    padding: 25px;
-    border-radius: 10px;
-    transition: 0.3s ease;
-}
-
-#projects article:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-}
-
-#projects article h3 {
-    margin-bottom: 10px;
-}
-
-#projects article p {
-    margin-bottom: 10px;
-}
-
-#projects article a {
-    display: inline-block;
-    margin-top: 10px;
-    padding: 8px 16px;
-    background-color: #1f2937;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: 0.3s ease;
-}
-
-#projects article a:hover {
-    background-color: #374151;
-    transform: scale(1.05);
-}
-
-/* ---------- RESUME ---------- */
-
-#resume {
-    text-align: center;
-}
-
-#resume a {
-    display: inline-block;
-    margin-top: 15px;
-    padding: 12px 25px;
-    background-color: #1f2937;
-    color: white;
-    text-decoration: none;
-    border-radius: 6px;
-    transition: 0.3s ease;
-}
-
-#resume a:hover {
-    background-color: #374151;
-    transform: scale(1.05);
-}
-
-/* ---------- CONTACT FORM ---------- */
-
-#contact form {
-    width: 100%;
-    max-width: 700px;
-    margin: auto;
-}
-
-#contact label {
-    display: block;
-    margin-top: 15px;
-    margin-bottom: 5px;
-    font-weight: bold;
-}
-
-#contact input,
-#contact textarea,
-#contact select {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    font-size: 16px;
-}
-
-#contact textarea {
-    min-height: 150px;
-    resize: vertical;
-}
-
-#contact input:focus,
-#contact textarea:focus,
-#contact select:focus {
-    outline: none;
-    border-color: #1f2937;
-    box-shadow: 0 0 5px rgba(31, 41, 55, 0.25);
-}
-
-#contact button {
-    margin-top: 20px;
-    margin-right: 10px;
-    padding: 12px 25px;
-    border: none;
-    border-radius: 6px;
-    background-color: #1f2937;
-    color: white;
-    cursor: pointer;
-    transition: 0.3s ease;
-}
-
-#contact button:hover {
-    background-color: #374151;
-    transform: translateY(-2px);
-}
-
-/* ---------- FOOTER ---------- */
-
-footer {
-    background-color: #1f2937;
-    color: white;
-    text-align: center;
-    padding: 30px 20px;
-    margin-top: 30px;
-}
-
-footer a {
-    color: white;
-    margin: 0 10px;
-    text-decoration: none;
-    transition: 0.3s ease;
-}
-
-footer a:hover {
-    text-decoration: underline;
-}
-
-/* =========================================
-   TABLET
-   ========================================= */
-
-@media (max-width: 900px) {
-
-    #home {
-        flex-direction: column;
         text-align: center;
     }
 
-    #projects {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    #skills {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    section {
-        padding: 30px;
-    }
-}
-
-/* =========================================
-   MOBILE
-   ========================================= */
-
-@media (max-width: 600px) {
-
-    header {
-        padding: 15px;
-    }
-
-    nav ul {
-        flex-direction: column;
-        gap: 8px;
-    }
-
     main {
-        width: 95%;
-        margin: 15px auto;
+        width: 94%;
+        margin: 20px auto;
     }
 
     section {
@@ -806,46 +543,58 @@ footer a:hover {
     }
 
     section h2 {
-        font-size: 24px;
+        font-size: 1.5rem;
     }
 
     #home {
-        padding: 25px 15px;
-    }
-
-    #home img {
-        width: 160px;
-        height: 160px;
-    }
-
-    #skills {
         grid-template-columns: 1fr;
+        grid-template-areas:
+            "image"
+            "title"
+            "intro"
+            "interest"
+            "learning"
+            "buttons";
+        text-align: center;
     }
 
-    #skills h2 {
-        grid-column: auto;
+    #home figure img {
+        width: 180px;
+        height: auto;
+    }
+
+    #home h2 {
+        font-size: 1.8rem;
+    }
+
+    #home p:nth-of-type(4) a {
+        display: block;
+        margin: 8px 0;
+    }
+
+    #skills h3:first-of-type + ul,
+    #skills h3:not(:first-of-type) + ul {
+        grid-template-columns: 1fr;
     }
 
     #projects {
         grid-template-columns: 1fr;
     }
 
-    #projects h2 {
-        grid-column: auto;
-    }
-
     #education table {
-        font-size: 14px;
+        min-width: 650px;
     }
 
     #contact input,
-    #contact textarea,
-    #contact select {
-        font-size: 15px;
+    #contact select,
+    #contact textarea {
+        font-size: 16px;
     }
 
-    #contact button {
-        width: 100%;
-        margin-right: 0;
-    }
+}
+header {
+    background-color: #1f2937;
+    color: white;
+    text-align: center;
+    padding: 20px;
 }

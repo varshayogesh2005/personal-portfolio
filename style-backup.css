@@ -1,0 +1,1009 @@
+/* ================================
+   GENERAL STYLES
+================================ */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f6f8;
+    color: #222;
+}
+
+/* ================================
+   HEADER
+================================ */
+
+header {
+    background-color: #1f2937;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+header h1 {
+    margin: 0 0 8px;
+    font-size: 2.2rem;
+}
+
+header p {
+    margin: 0 0 20px;
+    font-size: 1rem;
+}
+
+/* ================================
+   NAVIGATION
+================================ */
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 0;
+    margin: 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 12px;
+    border-radius: 6px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+nav a:hover {
+    background-color: #374151;
+    transform: translateY(-2px);
+}
+
+/* ================================
+   MAIN CONTENT
+================================ */
+
+main {
+    width: 90%;
+    max-width: 1100px;
+    margin: 30px auto;
+}
+
+section {
+    background-color: white;
+    margin-bottom: 30px;
+    padding: 35px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+section h2 {
+    margin-top: 0;
+    font-size: 1.8rem;
+}
+
+/* ================================
+   HERO / HOME
+================================ */
+
+#home {
+    text-align: center;
+}
+
+#home figure {
+    margin: 20px auto;
+}
+
+#home img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+}
+
+#home a {
+    display: inline-block;
+    margin: 8px;
+    padding: 10px 18px;
+    background-color: #1f2937;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+#home a:hover {
+    background-color: #374151;
+    transform: scale(1.05);
+}
+
+/* ================================
+   ABOUT
+================================ */
+
+#about {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+#about h2 {
+    grid-column: 1 / -1;
+}
+
+#about article {
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+}
+
+#about article h3 {
+    margin-top: 0;
+}
+
+/* ================================
+   SKILLS
+================================ */
+
+#skills {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+#skills h2 {
+    grid-column: 1 / -1;
+}
+
+#skills article {
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+#skills article:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.12);
+}
+
+#skills ul {
+    padding-left: 20px;
+}
+
+/* ================================
+   EDUCATION
+================================ */
+
+#education {
+    overflow-x: auto;
+}
+
+#education table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#education th,
+#education td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #ccc;
+}
+
+#education th {
+    background-color: #1f2937;
+    color: white;
+}
+
+/* ================================
+   PROJECTS
+================================ */
+
+#projects {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+#projects h2 {
+    grid-column: 1 / -1;
+}
+
+#projects article {
+    padding: 22px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #fafafa;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+#projects article:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+}
+
+/* ================================
+   RESUME
+================================ */
+
+#resume {
+    text-align: center;
+}
+
+#resume a {
+    display: inline-block;
+    padding: 12px 20px;
+    margin: 8px;
+    background-color: #1f2937;
+    color: white;
+    text-decoration: none;
+    border-radius: 7px;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+#resume a:hover {
+    background-color: #374151;
+    transform: scale(1.05);
+}
+
+/* ================================
+   CERTIFICATIONS
+================================ */
+
+#certifications ul {
+    padding-left: 25px;
+}
+
+/* ================================
+   CONTACT FORM
+================================ */
+
+#contact form {
+    max-width: 700px;
+    margin: 20px auto;
+}
+
+fieldset {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+legend {
+    font-weight: bold;
+    padding: 0 8px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 6px;
+    border: 1px solid #bbb;
+    border-radius: 6px;
+    font: inherit;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: 2px solid #1f2937;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    width: auto;
+    margin-right: 6px;
+}
+
+button {
+    padding: 11px 20px;
+    margin-right: 8px;
+    border: none;
+    border-radius: 6px;
+    background-color: #1f2937;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+button:hover {
+    background-color: #374151;
+    transform: translateY(-2px);
+}
+
+/* ================================
+   FOOTER
+================================ */
+
+footer {
+    background-color: #1f2937;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+footer a {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* ================================
+   TABLET
+================================ */
+
+@media (max-width: 900px) {
+
+    #about {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    #skills {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    #projects {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    section {
+        padding: 25px;
+    }
+}
+
+/* ================================
+   MOBILE
+================================ */
+
+@media (max-width: 600px) {
+
+    header {
+        padding: 25px 15px;
+    }
+
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    nav a {
+        display: block;
+    }
+
+    main {
+        width: 95%;
+        margin: 20px auto;
+    }
+
+    section {
+        padding: 20px;
+    }
+
+    #about,
+    #skills,
+    #projects {
+        grid-template-columns: 1fr;
+    }
+
+    #home img {
+        width: 180px;
+    }
+
+    #education table {
+        min-width: 650px;
+    }
+
+    #contact form {
+        width: 100%;
+    }
+
+    button {
+        margin-bottom: 10px;
+    }
+}
+
+/* =========================================
+   WEEK 2 - CSS FUNDAMENTALS
+   ========================================= */
+
+/* ---------- BASIC RESET ---------- */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f5f7fa;
+    color: #222;
+}
+
+/* ---------- HEADER ---------- */
+
+header {
+    background-color: #1f2937;
+    color: white;
+    padding: 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header h1 {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+/* ---------- NAVIGATION - FLEXBOX ---------- */
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    list-style: none;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 12px;
+    transition: 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #374151;
+    border-radius: 6px;
+    transform: translateY(-2px);
+}
+
+/* ---------- MAIN ---------- */
+
+main {
+    width: 90%;
+    max-width: 1200px;
+    margin: 30px auto;
+}
+
+/* ---------- SECTIONS ---------- */
+
+section {
+    background-color: white;
+    margin-bottom: 30px;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+section h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 30px;
+}
+
+/* ---------- HERO / HOME ---------- */
+
+#home {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    min-height: 400px;
+}
+
+#home img {
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid #1f2937;
+    max-width: 100%;
+}
+
+#home a {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 24px;
+    background-color: #1f2937;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: 0.3s ease;
+}
+
+#home a:hover {
+    background-color: #374151;
+    transform: scale(1.05);
+}
+
+/* ---------- ABOUT ---------- */
+
+#about p {
+    margin-bottom: 15px;
+}
+
+/* ---------- SKILLS - CSS GRID ---------- */
+
+#skills {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+#skills h2 {
+    grid-column: 1 / -1;
+}
+
+#skills article {
+    padding: 20px;
+    background-color: #f8fafc;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    transition: 0.3s ease;
+}
+
+#skills article:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.12);
+}
+
+/* ---------- EDUCATION ---------- */
+
+#education {
+    overflow-x: auto;
+}
+
+#education table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+#education th,
+#education td {
+    border: 1px solid #ccc;
+    padding: 12px;
+    text-align: left;
+}
+
+#education th {
+    background-color: #1f2937;
+    color: white;
+}
+
+#education tr:nth-child(even) {
+    background-color: #f3f4f6;
+}
+
+/* ---------- PROJECTS - CSS GRID ---------- */
+
+#projects {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+#projects h2 {
+    grid-column: 1 / -1;
+}
+
+#projects article {
+    background-color: #f8fafc;
+    border: 1px solid #ddd;
+    padding: 25px;
+    border-radius: 10px;
+    transition: 0.3s ease;
+}
+
+#projects article:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+#projects article h3 {
+    margin-bottom: 10px;
+}
+
+#projects article p {
+    margin-bottom: 10px;
+}
+
+#projects article a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 16px;
+    background-color: #1f2937;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.3s ease;
+}
+
+#projects article a:hover {
+    background-color: #374151;
+    transform: scale(1.05);
+}
+
+/* ---------- RESUME ---------- */
+
+#resume {
+    text-align: center;
+}
+
+#resume a {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 12px 25px;
+    background-color: #1f2937;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: 0.3s ease;
+}
+
+#resume a:hover {
+    background-color: #374151;
+    transform: scale(1.05);
+}
+
+/* ---------- CONTACT FORM ---------- */
+
+#contact form {
+    width: 100%;
+    max-width: 700px;
+    margin: auto;
+}
+
+#contact label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+#contact input,
+#contact textarea,
+#contact select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+#contact textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+#contact input:focus,
+#contact textarea:focus,
+#contact select:focus {
+    outline: none;
+    border-color: #1f2937;
+    box-shadow: 0 0 5px rgba(31, 41, 55, 0.25);
+}
+
+#contact button {
+    margin-top: 20px;
+    margin-right: 10px;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 6px;
+    background-color: #1f2937;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+#contact button:hover {
+    background-color: #374151;
+    transform: translateY(-2px);
+}
+
+/* ---------- FOOTER ---------- */
+
+footer {
+    background-color: #1f2937;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: 30px;
+}
+
+footer a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* =========================================
+   TABLET
+   ========================================= */
+
+@media (max-width: 900px) {
+
+    #home {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #projects {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    #skills {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    section {
+        padding: 30px;
+    }
+}
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 600px) {
+
+    header {
+        padding: 15px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    main {
+        width: 95%;
+        margin: 15px auto;
+    }
+
+    section {
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+
+    section h2 {
+        font-size: 24px;
+    }
+
+    #home {
+        padding: 25px 15px;
+    }
+
+    #home img {
+        width: 160px;
+        height: 160px;
+    }
+
+    #skills {
+        grid-template-columns: 1fr;
+    }
+
+    #skills h2 {
+        grid-column: auto;
+    }
+
+    #projects {
+        grid-template-columns: 1fr;
+    }
+
+    #projects h2 {
+        grid-column: auto;
+    }
+
+    #education table {
+        font-size: 14px;
+    }
+
+    #contact input,
+    #contact textarea,
+    #contact select {
+        font-size: 15px;
+    }
+
+    #contact button {
+        width: 100%;
+        margin-right: 0;
+    }
+}
+/* =================================
+   RESPONSIVE DESIGN
+   ================================= */
+
+/* TABLET */
+@media (max-width: 900px) {
+
+    main {
+        width: 92%;
+    }
+
+    header {
+        padding: 20px 15px;
+    }
+
+    nav ul {
+        gap: 8px;
+    }
+
+    nav a {
+        padding: 7px 10px;
+    }
+
+    #home {
+        padding: 30px 20px;
+    }
+
+    #home figure {
+        margin: 15px auto;
+    }
+
+    #skills,
+    #projects {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    #education table {
+        min-width: 100%;
+    }
+}
+
+
+/* MOBILE */
+@media (max-width: 600px) {
+
+    body {
+        font-size: 16px;
+    }
+
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    header p {
+        font-size: 0.95rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    nav a {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+
+    main {
+        width: 94%;
+        margin: 15px auto;
+    }
+
+    section {
+        padding: 20px;
+    }
+
+    #home {
+        padding: 20px 10px;
+    }
+
+    #home figure img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    #skills,
+    #projects {
+        grid-template-columns: 1fr;
+    }
+
+    #education {
+        overflow-x: auto;
+    }
+
+    #contact form {
+        width: 100%;
+    }
+
+    input,
+    textarea,
+    select {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    button {
+        width: 100%;
+    }
+}
+
+/* HOME SECTION IMPROVEMENT */
+
+#home {
+    padding: 45px 40px;
+}
+
+#home figure {
+    margin: 10px auto;
+}
+
+#home img {
+    width: 150px;
+    height: 240px;
+    object-fit: cover;
+    border-radius: 80px;
+}
+
+#home a {
+    min-width: 120px;
+    text-align: center;
+}
+/* HOME LAYOUT */
+
+#home {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 35px;
+    flex-wrap: wrap;
+}
+
+#home h2 {
+    margin: 0;
+}
+
+#home figure {
+    flex: 0 0 150px;
+}
+
+#home > p {
+    max-width: 260px;
+    margin: 0;
+}
+
+#home a {
+    display: block;
+}
