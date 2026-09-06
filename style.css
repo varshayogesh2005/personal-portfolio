@@ -598,3 +598,18 @@ header {
     text-align: center;
     padding: 20px;
 }
+/* =========================================
+   FORM RADIO & CHECKBOX FIX
+   ========================================= */
+
+#contact input[type="radio"],
+#contact input[type="checkbox"] {
+    width: auto;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+#contact label {
+    display: block;
+    margin-bottom: 10px;
+}
