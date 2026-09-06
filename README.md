@@ -56,13 +56,22 @@ personal-portfolio/
 
 ## Screenshots
 
-Add screenshots of the completed website here after the website is finalized.
+### Desktop View
+The portfolio is designed with a clean desktop layout using CSS Grid and Flexbox.
 
-Example:
+### Tablet View
+The layout adjusts automatically for medium-sized screens using responsive CSS.
 
-```text
-![Portfolio Screenshot](screenshots/home.png)
-```
+### Mobile View
+The portfolio is optimized for mobile devices with a single-column layout and responsive navigation.
+
+## CSS Implementation
+
+The portfolio uses an external `style.css` file for all styling. CSS Grid and Flexbox are used to create flexible layouts, while media queries make the website responsive across desktop, tablet and mobile screen sizes. Hover effects, transitions, spacing, typography and form styling are also implemented using CSS.
+
+## Responsive Design
+
+The website was tested at different screen sizes, including a mobile viewport of approximately 390px width, to ensure that the content remains readable and properly arranged.
 
 ## Future Improvements
 
