@@ -79,7 +79,8 @@
 
         <section id="home">
 
-            <h2>Welcome to My Portfolio</h2>
+            <h2 id="dynamic-greeting">Welcome to My Portfolio</h2>
+            <p id="dynamic-message"></p>
 
 
             <figure>
@@ -128,17 +129,17 @@
 
             <p>
 
-                <a href="#projects">
-                    Explore My Projects
-                </a>
+    <button id="explore-projects">
+        Explore My Projects
+    </button>
 
-                &nbsp; | &nbsp;
+    &nbsp; | &nbsp;
 
-                <a href="#contact">
-                    Get in Touch
-                </a>
+    <a href="#contact">
+        Get in Touch
+    </a>
 
-            </p>
+</p>
 
         </section>
 
@@ -222,45 +223,15 @@
 
     <h2>My Skills</h2>
 
-    <article>
+   <article>
 
-        <h3>Technical Skills</h3>
+    <h3>Technical Skills</h3>
 
-        <ul>
+    <ul id="skills-container">
+        <!-- JavaScript will generate the skills here -->
+    </ul>
 
-            <li>
-                <span>C Programming</span>
-                <span class="skill-level">Intermediate</span>
-            </li>
-
-            <li>
-                <span>C++ Programming</span>
-                <span class="skill-level">Intermediate</span>
-            </li>
-
-            <li>
-                <span>Object-Oriented Programming</span>
-                <span class="skill-level">Intermediate</span>
-            </li>
-
-            <li>
-                <span>Data Structures - Basics</span>
-                <span class="skill-level">Beginner</span>
-            </li>
-
-            <li>
-                <span>HTML</span>
-                <span class="skill-level">Intermediate</span>
-            </li>
-
-            <li>
-                <span>VS Code</span>
-                <span class="skill-level">Intermediate</span>
-            </li>
-
-        </ul>
-
-    </article>
+</article>
 
 
     <article>
@@ -438,91 +409,86 @@
 
         <!-- ================= PROJECTS SECTION ================= -->
 
-        <section id="projects"> 
+        <section id="projects">
 
     <h2>My Projects</h2>
 
-    <!-- PROJECT 1 -->
-    <article>
+    <!-- Search -->
+    <div class="project-controls">
 
-        <h3>AI-Based Waste Management System</h3>
+        <input
+            type="text"
+            id="project-search"
+            placeholder="Search projects..."
+        >
+
+        <!-- Category Filters -->
+        <div id="project-filters">
+
+            <button data-category="All">All</button>
+            <button data-category="Web">Web</button>
+            <button data-category="JavaScript">JavaScript</button>
+            <button data-category="React">React</button>
+            <button data-category="Other">Other</button>
+
+        </div>
+
+    </div>
+
+    <!-- JavaScript will generate projects here -->
+    <div id="projects-container"></div>
+    <!-- Project Details Modal -->
+<div id="project-modal" class="project-modal">
+
+    <div class="modal-content">
+
+        <button id="modal-close" class="modal-close">
+            &times;
+        </button>
+
+        <h2 id="modal-title"></h2>
+
+        <p id="modal-description"></p>
 
         <p>
-            <strong>Technologies:</strong>
-            Python, Machine Learning
+            <strong>Technology:</strong>
+            <span id="modal-technology"></span>
         </p>
 
         <p>
-            Designed a smart AI-based waste segregation system and
-            proposed intelligent waste classification using machine
-            learning concepts. The project focuses on improving
-            waste management efficiency.
+            <strong>Category:</strong>
+            <span id="modal-category"></span>
         </p>
 
-        <p>
-            <strong>Area:</strong>
-            Artificial Intelligence / Waste Management
-        </p>
-        <p>
-    <a href="#projects">View Project</a>
-</p>
-
-    </article>
-
-    <!-- PROJECT 2 -->
-    <article>
-
-        <h3>School Planner Application</h3>
-
-        <p>
-            <strong>Technologies:</strong>
-            HTML, CSS, JavaScript
-        </p>
-
-        <p>
-            A planner application currently being developed for
-            students. It is designed to support timetable management,
-            assignment tracking, reminders, attendance and study
-            planning.
-        </p>
-
-        <p>
-            <strong>Status:</strong>
-            Currently Developing
-        </p>
-        <p>
-    <a href="#projects">View Project</a>
-</p>
-
-    </article>
-
-    <!-- PROJECT 3 -->
-    <article>
-
-        <h3>Personal Portfolio Website</h3>
-
-        <p>
-            A personal portfolio website created using semantic HTML
-            to showcase my education, skills, projects, resume and
-            contact information.
-        </p>
-
-        <p>
-            <strong>Technologies:</strong>
-            HTML5, Git and GitHub
-        </p>
         <a
-    href="https://varshayogesh2005.github.io/personal-portfolio/"
-    target="_blank"
-    rel="noopener noreferrer"
->
-    View Project
-</a>
+            id="modal-link"
+            href="#"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            View Project
+        </a>
 
-    </article>
+    </div>
+
+</div>
 
 </section>
+<!-- =========================================
+     FEATURE 07 - API INTEGRATION
+     ========================================= -->
 
+<section id="github-api">
+    <h2>GitHub Repository</h2>
+
+    <button id="load-github">
+        Load GitHub Information
+    </button>
+
+    <div id="github-result">
+        <p>Click the button to load repository information.</p>
+    </div>
+</section>
            
 
         <!-- ================= RESUME SECTION ================= -->
@@ -666,7 +632,7 @@
 
             <!-- CONTACT FORM -->
 
-            <form action="#" method="post">
+            <form id="contact-form" action="#" method="post">
 
 
                 <fieldset>
@@ -1002,7 +968,8 @@
 
     </footer>
 
-</body>
+<script src="script.js"></script>
 
+</body>
 </html>
 

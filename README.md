@@ -2,14 +2,15 @@
 
 ## Project Description
 
-This project is a personal portfolio website created for Varsha Yogesh,
-a Computer Science and Design Engineering student at Mysore University
-School of Engineering.
+This project is a personal portfolio website created for Varsha Yogesh, a Computer Science and Design Engineering student at Mysore University School of Engineering.
 
-The website presents academic information, technical and soft skills,
-projects, certifications, resume information, and a contact form.
+The portfolio was originally developed as a responsive HTML and CSS website and was upgraded in Week 3 of the InternNova internship into an interactive JavaScript-powered web application.
+
+The website presents academic information, technical and soft skills, projects, certifications, resume information, contact details and interactive features.
 
 ## Features
+
+### Week 2 Features
 
 - Semantic HTML5 structure
 - Header and navigation menu
@@ -24,21 +25,54 @@ projects, certifications, resume information, and a contact form.
 - Accessible form labels
 - HTML form validation
 - Radio buttons, checkbox, select and textarea
+- Responsive design for desktop, tablet and mobile
+- CSS Grid and Flexbox layouts
 - Git/GitHub-ready project structure
+
+### Week 3 JavaScript Features
+
+- JavaScript-powered interactive portfolio
+- Mobile navigation menu toggle
+- Smooth scrolling navigation
+- Active navigation section highlighting
+- Back-to-top button
+- Dynamic time-based greeting
+- Interactive "Explore My Projects" button
+- Dynamically generated technical skills
+- Project data generated using JavaScript arrays
+- Project search functionality
+- Project category filtering
+- Combined search and category filtering
+- Project details modal
+- Dynamic project information display
+- Light/Dark mode theme switching
+- Theme preference stored using Local Storage
+- Contact form validation using JavaScript
+- GitHub repository information loaded using an API
+- Responsive JavaScript interactions
+- DOM manipulation and event handling
 
 ## Technologies Used
 
 - HTML5
+- CSS3
+- JavaScript
+- DOM Manipulation
+- Local Storage
 - Git
 - GitHub
+- GitHub API
 - Visual Studio Code
 
 ## Project Structure
 
 ```text
 personal-portfolio/
+
 │
 ├── index.html
+├── style.css
+├── script.js
 ├── README.md
 │
 ├── images/
@@ -46,48 +80,3 @@ personal-portfolio/
 │
 └── assets/
     └── resume.pdf
-```
-
-## How to Run the Project
-
-1. Download or clone the repository.
-2. Open the `personal-portfolio` folder.
-3. Open `index.html` in a web browser.
-
-## Screenshots
-
-### Desktop View
-The portfolio is designed with a clean desktop layout using CSS Grid and Flexbox.
-
-### Tablet View
-The layout adjusts automatically for medium-sized screens using responsive CSS.
-
-### Mobile View
-The portfolio is optimized for mobile devices with a single-column layout and responsive navigation.
-
-## CSS Implementation
-
-The portfolio uses an external `style.css` file for all styling. CSS Grid and Flexbox are used to create flexible layouts, while media queries make the website responsive across desktop, tablet and mobile screen sizes. Hover effects, transitions, spacing, typography and form styling are also implemented using CSS.
-
-## Responsive Design
-
-The website was tested at different screen sizes, including a mobile viewport of approximately 390px width, to ensure that the content remains readable and properly arranged.
-
-## Future Improvements
-
-- Add CSS styling for a more polished visual design
-- Add JavaScript interactivity
-- Add more projects
-- Add GitHub profile and project links
-- Deploy the portfolio using GitHub Pages
-- Add a favicon
-- Add an introduction video
-- Add a Google Maps embed if required
-
-## Author
-
-Varsha Yogesh
-
-Computer Science and Design Engineering
-Mysore University School of Engineering
-Mysuru, Karnataka
