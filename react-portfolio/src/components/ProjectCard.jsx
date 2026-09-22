@@ -6,9 +6,16 @@ function ProjectCard({
   description,
   technologies,
   category,
+  image,
 }) {
   return (
     <div className="project-card">
+      <img
+        src={image}
+        alt={name}
+        className="project-card-image"
+      />
+
       <h3>{name}</h3>
 
       <p>{description}</p>
@@ -18,7 +25,8 @@ function ProjectCard({
       </p>
 
       <p>
-        <strong>Technologies:</strong> {technologies.join(", ")}
+        <strong>Technologies:</strong>{" "}
+        {technologies.join(", ")}
       </p>
 
       <Link to={`/project/${id}`}>

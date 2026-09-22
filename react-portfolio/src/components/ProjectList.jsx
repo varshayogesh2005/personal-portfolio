@@ -7,11 +7,14 @@ function ProjectList() {
   const [category, setCategory] = useState("All");
 
   const filteredProjects = projects.filter((project) => {
+    const searchText = search.toLowerCase();
+
     const matchesSearch =
-      project.name.toLowerCase().includes(search.toLowerCase()) ||
+      project.name.toLowerCase().includes(searchText) ||
       project.technologies.some((technology) =>
-        technology.toLowerCase().includes(search.toLowerCase())
-      );
+        technology.toLowerCase().includes(searchText)
+      ) ||
+      project.category.toLowerCase().includes(searchText);
 
     const matchesCategory =
       category === "All" || project.category === category;
@@ -32,13 +35,10 @@ function ProjectList() {
         />
 
         <button onClick={() => setCategory("All")}>All</button>
-
         <button onClick={() => setCategory("Web")}>Web</button>
-
         <button onClick={() => setCategory("JavaScript")}>
           JavaScript
         </button>
-
         <button onClick={() => setCategory("React")}>React</button>
       </div>
 
@@ -52,6 +52,7 @@ function ProjectList() {
               description={project.description}
               technologies={project.technologies}
               category={project.category}
+              image={project.image}
             />
           ))
         ) : (
